@@ -1,0 +1,80 @@
+/* ====== base CRA ====== */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+/* --- QUICK MENU sticky debajo del header --- */
+.quick-menu-sticky {
+  position: sticky;
+  top: 72px; /* ajusta si tu header es más alto */
+  z-index: 5;
+}
+
+.quick-menu {
+  padding: 8px 16px 4px;
+}
+
+.quick-menu__row,
+.quick-sub__row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.quick-menu__pill {
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.quick-menu__pill.is-active {
+  background: rgba(120, 120, 255, 0.25);
+}
+.quick-menu__pill:hover {
+  background: rgba(120, 120, 255, 0.35);
+}
+
+.quick-sub__pill {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.quick-sub__pill:hover {
+  background: rgba(120, 120, 255, 0.25);
+}
+
+/* Tarjetas payload Dialogflow (por si no tienes estilos) */
+.rc-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 12px;
+  padding: 12px;
+}
+.rc-btn {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(120,120,255,0.25);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: inherit;
+  text-decoration: none;
+  width: fit-content;
+}

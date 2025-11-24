@@ -1,0 +1,93 @@
+/*app.css*/
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* ==== QUICK MENU (sticky debajo del header) ==== */
+.quick-menu-sticky { position: sticky; top: 72px; z-index: 5; }
+
+.quick-menu {
+  padding: 8px 16px 4px;
+  background: transparent;
+}
+
+.quick-menu__row,
+.quick-sub__row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.quick-menu__pill {
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.quick-menu__pill.is-active {
+  background: rgba(120,120,255,0.25);
+}
+
+.quick-sub__pill {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Tarjetas payload Dialogflow (por si no tienes estilos) */
+.rc-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 12px;
+  padding: 12px;
+}
+.rc-btn {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(120,120,255,0.25);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: inherit;
+  text-decoration: none;
+  width: fit-content;
+}
