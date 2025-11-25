@@ -49,6 +49,10 @@ export default function useChatApi() {
     setMessages((m) => [...m, { role: "bot", time: now(), ...obj }]);
 
   const pushPreguntaOtro = () =>
+    setCurrentMainKey(null);
+    setAskUbic(false);
+    setMustPickMenu(true);
+    
     setMessages((m) => [
       ...m,
       { role: "bot", payload: PREGUNTA_OTRO, time: now() },
